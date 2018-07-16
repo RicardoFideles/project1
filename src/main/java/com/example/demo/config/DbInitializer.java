@@ -21,14 +21,20 @@ public class DbInitializer implements ApplicationListener<ContextRefreshedEvent>
 	public void onApplicationEvent(ContextRefreshedEvent arg0) {
 		
 		List<User> users = userRepository.findAll();
+		System.out.println("----");
+		System.out.println(users.isEmpty());
+		System.out.println("----");
 		
 		if (users.isEmpty()) {
 			createUser("demo1", "demo1@demo.com");
 			createUser("demo2", "demo2@demo.com");
 			createUser("demo3", "demo3@demo.com");
 		}
-		List<User> lista = userRepository.findUsersNameLike("dem");
-		System.out.println(lista.size());
+//		List<User> lista = userRepository.findUsersNameLike("dem");
+//		System.out.println(lista.size());
+		
+		User user = userRepository.findByNameIgnoreCase("jose");
+		System.out.println(user.getName());
 				
 	}
 	
