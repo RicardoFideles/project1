@@ -14,6 +14,7 @@
 				Email
 			</th>
 		</tr>
+		
 		<tr th:each="user : ${usersList}">
 			<td th:text="${user.name}"></td>
 			<td th:text="${user.email}"></td>
