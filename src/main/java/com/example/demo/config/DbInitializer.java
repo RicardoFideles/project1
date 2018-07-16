@@ -33,7 +33,7 @@ public class DbInitializer implements ApplicationListener<ContextRefreshedEvent>
 //		List<User> lista = userRepository.findUsersNameLike("dem");
 //		System.out.println(lista.size());
 		
-		User user = userRepository.findByNameIgnoreCase("jose");
+		User user = userRepository.findByNameIgnoreCase("demo1");
 		System.out.println(user.getName());
 				
 	}
