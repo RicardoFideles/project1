@@ -30,8 +30,8 @@ public class DbInitializer implements ApplicationListener<ContextRefreshedEvent>
 			createUser("demo2", "demo2@demo.com");
 			createUser("demo3", "demo3@demo.com");
 		}
-//		List<User> lista = userRepository.findUsersNameLike("dem");
-//		System.out.println(lista.size());
+		List<User> lista = userRepository.findByNameLike("dem");
+		System.out.println(lista.size());
 		
 		User user = userRepository.findByNameIgnoreCase("demo1");
 		System.out.println(user.getName());
