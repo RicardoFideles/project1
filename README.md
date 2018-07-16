@@ -12,9 +12,12 @@
 ```
 
 Add in application.properties
+
+```
 spring.data.mongodb.host=localhost
 spring.data.mongodb.port=27017
 spring.data.mongodb.database=projeto1
+```
 
 Reference docs.
 https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
@@ -31,8 +34,10 @@ https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#reposito
 </dependency>
 ```
 Add in application.properties
-spring.h2.console.enabled=true
 
+```
+spring.h2.console.enabled=true
+```
 
 http://localhost:8080/h2-console
 
@@ -46,11 +51,13 @@ http://localhost:8080/h2-console
 ```
 
 Add in application.properties
+
+```
 spring.jpa.hibernate.ddl-auto=update
 spring.datasource.url=jdbc:mysql://localhost:3306/dbprojeto1
 spring.datasource.username=demo
 spring.datasource.password=demo
 spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
-
+```
 
 
